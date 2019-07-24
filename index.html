@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Выжигание портретов</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/bootstrap-grid.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form name="orderForm" action="send.php" method="post">
+        <div id="order">
+            <div class="container">
+                <div class="row">
+                    <div id="pic-config" class="col-md-4 offset-md-1">
+                            <h1>Выберите размер</h1>
+                            <p>Здесь вы можете подобрать стандартные размеры:</p>
+                            <input type="radio" name="sizeRadios" id="A5" class="default-size" oninput="setDefaultSize()">
+                            <label for="A5" class="default-size-label">A5</label>
+
+                            <input type="radio" name="sizeRadios" id="A4" class="default-size" oninput="setDefaultSize()">
+                            <label for="A4" class="default-size-label">A4</label>
+
+                            <input type="radio" name="sizeRadios" id="A3" class="default-size" oninput="setDefaultSize()">
+                            <label for="A3" class="default-size-label">A3</label>
+                            
+                            <svg class="svg-icon" id="rotate-icon" viewBox="0 0 20 20" onclick="flip()">
+                                    <path  d="M3.254,6.572c0.008,0.072,0.048,0.123,0.082,0.187c0.036,0.07,0.06,0.137,0.12,0.187C3.47,6.957,3.47,6.978,3.484,6.988c0.048,0.034,0.108,0.018,0.162,0.035c0.057,0.019,0.1,0.066,0.164,0.066c0.004,0,0.01,0,0.015,0l2.934-0.074c0.317-0.007,0.568-0.271,0.56-0.589C7.311,6.113,7.055,5.865,6.744,5.865c-0.005,0-0.01,0-0.015,0L5.074,5.907c2.146-2.118,5.604-2.634,7.971-1.007c2.775,1.912,3.48,5.726,1.57,8.501c-1.912,2.781-5.729,3.486-8.507,1.572c-0.259-0.18-0.618-0.119-0.799,0.146c-0.18,0.262-0.114,0.621,0.148,0.801c1.254,0.863,2.687,1.279,4.106,1.279c2.313,0,4.591-1.1,6.001-3.146c2.268-3.297,1.432-7.829-1.867-10.101c-2.781-1.913-6.816-1.36-9.351,1.058L4.309,3.567C4.303,3.252,4.036,3.069,3.72,3.007C3.402,3.015,3.151,3.279,3.16,3.597l0.075,2.932C3.234,6.547,3.251,6.556,3.254,6.572z"></path>
+                            </svg>
+
+                            <p>Свой размер:</p>
+                            <label>Ширина:</label><br><input id="pic-width" type="range" min="10" max="40" step="1" value="20" onchange="changePicWidth(), uncheckRadios()" oninput="changePicWidth()"> 
+                            <br><div id="resultWidth">20 см</div><br>
+                            <label>Высота:</label><br><input id="pic-height" type="range" min="10" max="40" step="1" value="20" onchange="changePicHeight(), uncheckRadios()" oninput="changePicHeight()">
+                            <br><div id="resultHeight">20 см</div><br>
+                            <input name="photoFile" type="file" id="photoFile">
+                            <p>Ваши данные:</p>
+                            <input name="name" id="name" type="text" placeholder="   Ваше имя" required><br>
+                            <input name="email" id="email" type="email" placeholder="   E-mail" required><br>
+                            <textarea name="wishes" id="wishes" cols="39" rows="5" placeholder=" Ваши пожелания..."></textarea><br>
+                    </div>
+                    <div class="col-md-6 offset-md-1">
+                        <div id="pic-size" class="d-flex justify-content-center">
+                                <div id="height-iface" class="align-self-center d-flex justify-content-center">
+                                    <div id="height-iface-value" class="align-self-center">20 см</div>
+                                    <div id="arrow-up"></div>
+                                    <div id="arrow-down"></div>
+                                </div>
+                                <div id="width-iface" class="align-self-center d-flex justify-content-center">
+                                    <div id="width-iface-value" class="align-self-center">20 см</div>
+                                    <div id="arrow-left"></div>
+                                    <div id="arrow-right"></div>
+                                </div>
+                            <div id="rectangle" class="align-self-center">
+                                <img src="" alt="your image" id="image">
+                            </div>
+                        </div>
+                        <p id="priceBlock">Стоимость: <span id="price">1000</span> рублей</p>
+                        <input type="submit" id="order-button" value="Заказать">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="script/main.js"></script>
+</body>
+</html>

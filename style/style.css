@@ -1,0 +1,271 @@
+.svg-icon {
+    width: 2em;
+    height:2em;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    background-color: #e3ded3;
+}  
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Стили ползунка */
+
+input[type=range] {
+ -webkit-appearance: none;
+ width: 350px;
+ border-radius: 8px;
+ height: 7px;
+ background-color: rgb(255, 255, 255); 
+}
+
+input[type=range]:focus {
+    outline: none;
+  }
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #cecece;
+    height: 20px;
+    width: 20px;
+    border-radius: 8px;
+    background: #ff957b;
+    cursor: pointer;
+}
+   
+/* Тоже самое для Firefox */
+input[type=range]::-moz-range-thumb {
+border: 1px solid #cecece;
+height: 20px;
+width: 20px;
+border-radius: 8px;
+background: #ff957b;
+cursor: pointer;
+}
+
+/* Тоже самое для IE */
+input[type=range]::-ms-thumb {
+border: 1px solid #cecece;
+height: 20px;
+width: 20px;
+border-radius: 8px;
+background: #ff957b;
+cursor: pointer;
+}
+
+input[type = text], input[type = email] {
+    width: 350px;
+    height: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+}
+
+textarea {
+    font-size: 15px;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    width: 350px;
+}
+
+#order-button {
+    float: right;
+    background-color: #ff957b;
+    border: none;
+    height: 50px;
+    width: 150px; 
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#order-button:hover {
+    background-color: rgb(235, 118, 82);
+}
+
+#order-button:active {
+    background-color: #ff957b;
+}
+
+#order-button:focus {
+    outline:0;
+}
+
+#priceBlock {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Кнопка загрузки файла */
+
+#photoFile::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+#photoFile::before {
+content: 'Загрузить фото';
+display: inline-block;
+background: #ff957b;
+padding: 5px 5px 5px 5px;
+outline: none;
+white-space: nowrap;
+-webkit-user-select: none;
+cursor: pointer;
+font-weight: 700;
+font-size: 10pt;
+}
+
+#photoFile:hover::before {
+border-color: black;
+}
+
+#photoFile:active::before {
+background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.default-size {
+   display: none;
+}
+
+.default-size-label {
+    background-color: #d1d1d1;
+    padding: 5px 13px;
+    font-size: 20px;
+}
+
+.default-size-label:hover {
+    background-color: #bababa;
+}
+
+#pic-config .default-size:checked + label{
+    background-color: #ff957b;
+}
+
+#rotate-icon {
+    position: relative;
+    fill: rgb(12, 12, 12);
+    top: 10px;
+    left: 10px;
+}
+
+#rotate-icon:hover {
+    fill: rgb(61, 61, 61);
+}
+
+#rotate-icon:active {
+    fill: rgb(100, 100, 100);
+}
+
+#order {
+    margin-top: 40px;
+}
+
+#pic-config {
+    position: relative;
+    bottom: 35px;
+}
+
+#pic-size {
+    background-color: #d3cbc8;
+    height: 480px;
+    position: relative;
+}
+
+#pic-height, #pic-width {
+    margin: 5px 0 5px 0;
+}
+
+#resultWidth, #resultHeight {
+    text-align: center;
+    
+}
+
+#rectangle {
+    align-content: center;
+    background-color:#f3efea;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    border: 6px outset rgb(238, 132, 105);
+}
+
+#image {
+    height: 300px;
+    position: relative;
+    display: none;
+}
+
+#height-iface {
+    height: 180px;
+    width: 2px;
+    background-color: black;
+    position: absolute;
+    left: 145px;
+}
+
+#width-iface {
+    height: 2px;
+    width: 188px;
+    background-color: black;
+    position: absolute;
+    top: 360px;
+}
+
+#arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 15px solid black;
+    position: absolute;
+    left: -5.5px;
+    top: -4px;
+}
+
+#arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 15px solid black;
+    position: absolute;
+    left: -5.5px;
+    bottom: -4px;
+}
+
+#arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 15px solid black;
+    position: absolute;
+    top: -5.5px;
+    left: -4px;
+}
+
+#arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 15px solid black;
+    position: absolute;
+    top: -5.5px;
+    right: -4px;
+
+}
+
+#height-iface-value, #width-iface-value {
+    background-color: #d3cbc8;
+    width: 50px;
+    text-align: center;
+}
